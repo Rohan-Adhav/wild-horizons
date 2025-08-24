@@ -4,7 +4,7 @@ import sendJsonResponse from "./utils/sendJsonResponse.js"
 import getDataByPathParams from "./utils/getDataByPathParams.js"
 import getDataByQueryParams from "./utils/getDataByQueryParams.js"
 
-const PORT = 8000
+const PORT = process.env.PORT || 8000
 const server = http.createServer(async (req, res) => {
     const destinations = await getDataFromDb()
 
